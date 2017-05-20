@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>test</title>
+    <style type="text/css">
+    body {
+        background: #fff;
+        font-family: microsoft yahei, Arial, Helvetica, sans-serif;
+        color: #fff;
+    }
+    
+    .content {
+        padding: 30px;
+    }
+    
+    .tabs {
+        width: 600px;
+        float: none;
+        list-style: none;
+        position: relative;
+        text-align: left;
+    }
+    
+    .tabs li {
+        float: left;
+        display: block;
+    }
+    
+    .tabs .tab-content {
+        z-index: 2;
+        display: none;
+        overflow: hidden;
+        width: 80%;
+        font-size: 17px;
+        line-height: 25px;
+        padding: 25px;
+        position: absolute;
+        top: 53px;
+        left: 0;
+        background: #000;
+    }
+    
+    .tabs input[type="radio"] {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    .tabs label {
+        display: block;
+        padding: 14px 21px;
+        border-radius: 2px 2px 0 0;
+        font-size: 20px;
+        font-weight: normal;
+        text-transform: uppercase;
+        background: #666;
+        cursor: pointer;
+        position: relative;
+        top: 4px;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .tabs label:hover {
+        background: #508438;
+    }
+    
+    .tabs [id^="tab"]:checked + label {
+        top: 0;
+        padding-top: 17px;
+        background: #000;
+    }
+    
+    .tabs [id^="tab"]:checked ~ [id^="tab-content"] {
+        display: block;
+    }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="content">
+            <ul class="tabs">
+                <li>
+                    <input type="radio" name="tabs" id="tab1" checked />
+                    <label for="tab1">选项卡 1</label>
+                    <div id="tab-content1" class="tab-content">
+                        <p>文本一</p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="tabs" id="tab2" />
+                    <label for="tab2">选项卡 2</label>
+                    <div id="tab-content2" class="tab-content">
+                        <p>文本二 2</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </center>
+</body>
+
+</html>
